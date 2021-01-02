@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JT72SSTZFW"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-JT72SSTZFW');
+    </script>
+    
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="https://protolith-app.s3-ap-southeast-2.amazonaws.com/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://protolith-app.s3-ap-southeast-2.amazonaws.com/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://protolith-app.s3-ap-southeast-2.amazonaws.com/favicon-16x16.png">
+    <link rel="manifest" href="https://protolith-app.s3-ap-southeast-2.amazonaws.com/site.webmanifest">
+  
+    <title>Protolith App</title>
+    <meta name="author" content="Rian Dutch">
+    <meta name="description" content="machine learning application to predict rock type from major element geochemistry">
+    <meta name="keywords" content="geology rock lithology geochemistry machine learning">
+  </head>
+  
+  <style>
+    .content {
+      max-width: 960px;
+      margin: auto;
+    }
+  </style>
+
+  <body>
+    <div class="container">
+      <div class="jumbotron text-center">
+        <h1>Rock Protolith Prediction App</h1>
+        <img class="img-rounded" src="https://protolith-app-static-resources.s3-ap-southeast-2.amazonaws.com/DSCN6550.JPG" alt='Migmatitic gneiss' style="width:80%" />
+        <br>
+      </div>
+    </div>
+    
+    <div class="container">
+      <h2>Model Results</h2>
+    </div>
+
+  <div class="container">
+    {{prediction|safe}}
+  </div>
+  <div class="container">
+    {{table_error|safe}}
+  </div>
+  <div class="container">
+    {{download|safe}}
+    {{tables|safe}}
+  </div>
+  <br>
+  <div class="container">
+    <a href="http://protolith-app.s3-website-ap-southeast-2.amazonaws.com/" class="btn btn-danger">Click to reset or submit another sample</a>
+  </div>
+  <br>
+    
+  <div class="container">
+    <h3>Contact, references and source code</h3>
+    <p>Contact me @RADutchie on twitter or GitHub for comments or issues, and check out my web site <a href="https://geodataanalytics.net">GeoDataAnalytics.net</a></p>
+    <p><a href="https://github.com/RADutchie/Rock_protolith_predictor">https://github.com/RADutchie/Rock_protolith_predictor</a> for model and source code</p>
+    <p>This predictor is a reformulation of the original work published by Hasterok et al 2019. 
+      <i>Chemical identification of metamorphic protoliths using machine learning methods</i>. Computers and Geosciences. <b>132</b>, 56-68</p>
+    <br>
+    <a href="https://geodataanalytics.net">
+      <img class="img-rounded mx-auto d-block" src="https://protolith-app.s3-ap-southeast-2.amazonaws.com/Original-cliped-resized.png" alt='GeoDataAnalytics logo'/>
+    <br>
+    <br>
+  </div>
+
+
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>  
+  </body>
+</html>
